@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+</head>
+<body>
+
+    <div id="popup">
+        <div id="popup-content">
+            <div id="cirle1" class="cirle"></div>
+            <div id="cirle2" class="cirle"></div>
+            <div id="cirle3" class="cirle"></div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    setTimeout(function() {
+        console.log('timeout1');
+    })
+
+    new Promise(function(resolve) {
+        console.log('promise1');
+        for(var i = 0; i < 1000; i++) {
+            i == 99 && resolve();
+        }
+        console.log('promise2');
+    }).then(function() {
+        console.log('then1');
+    })
+
+    console.log('global1');
+</script>
+
+</html>

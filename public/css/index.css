@@ -1,0 +1,78 @@
+@keyframes myTest {
+  from {
+    left: 0; }
+  to {
+    left: 20px; } }
+
+@-webkit-keyframes myTest {
+  from {
+    left: 0; }
+  to {
+    left: 20px; } }
+
+@keyframes myTest1 {
+  from {
+    right: 0; }
+  to {
+    right: 20px; } }
+
+@-webkit-keyframes myTest1 {
+  from {
+    right: 0; }
+  to {
+    right: 20px; } }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px; }
+
+.parent {
+  width: 400px;
+  height: 300px;
+  background: #E7A1C5; }
+  .parent .child {
+    width: 200px;
+    height: 100px;
+    background: #e28db8;
+    float: left;
+    transform: translate(10px, 50px); }
+
+#popup {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0; }
+  #popup #popup-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 50px;
+    height: 10px; }
+    #popup #popup-content .cirle {
+      background-color: #000;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      float: left; }
+    #popup #popup-content #cirle1 {
+      position: absolute;
+      left: 0;
+      top: 0;
+      -webkit-animation: myTest 1s ease-in-out 0s infinite alternate;
+      animation: myTest 1s ease-in-out 0s infinite alternate; }
+    #popup #popup-content #cirle2 {
+      position: absolute;
+      left: 20px;
+      top: 0; }
+    #popup #popup-content #cirle3 {
+      position: absolute;
+      right: 0;
+      top: 0;
+      -webkit-animation: myTest1 1s ease-in-out 0s infinite alternate;
+      animation: myTest1 1s ease-in-out 0s infinite alternate; }
